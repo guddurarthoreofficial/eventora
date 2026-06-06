@@ -1,0 +1,6 @@
+PORT = 5000;
+# MONGO_URI = mongodb://127.0.0.1:27017/eventora;
+MONGO_URI = mongodb+srv://Guddu_123:Guddu_123@cluster0.tihbq2w.mongodb.net/eventora?appName=Cluster0;
+
+EMAIL_USER = guddu748081@gmail.com
+EMAIL_PASS = riyifeajbvkkcqly
