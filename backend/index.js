@@ -3,7 +3,7 @@ const dotenv = require("dotenv");
 const cors = require("cors");
 const mongoose = require("mongoose");
 const authRoutes = require("./routes/auth");
-// const bookingRoutes = require("./routes/booking");
+const bookingRoutes = require("./routes/booking");
 const eventRoutes = require("./routes/events");
 
 const app = express();
@@ -16,7 +16,7 @@ app.use(cors());
 // routes
 app.use("/api/auth", authRoutes);
 app.use("/api/events", eventRoutes);
-// app.use("/api/bookings", bookingRoutes);
+app.use("/api/bookings", bookingRoutes);
 
 mongoose
   .connect(process.env.MONGO_URI)
