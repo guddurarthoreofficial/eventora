@@ -6,10 +6,10 @@ const { protect, admin } = require("../middleware/auth");
 const {
   createBooking,
   getBookings,
-  getMyBookings,
   sendBookingOTP,
+  getMyBookings,
   confirmBooking,
-  cancelBooking,
+  cancelBooking
 } = require("../controllers/bookingController");
 
 // Create Booking
