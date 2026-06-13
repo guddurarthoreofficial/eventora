@@ -32,12 +32,13 @@ const Login = () => {
       );
 
       alert(data.message || "Login Successful");
-
+      console.log(localStorage.getItem("token"));
+      
       navigate("/");
     } catch (error) {
       alert(
         error?.response?.data?.message ||
-          "Login Failed"
+        "Login Failed"
       );
     } finally {
       setLoading(false);
@@ -47,7 +48,7 @@ const Login = () => {
   return (
     <div className="min-h-screen flex justify-center items-center bg-gray-100 px-4">
       <div className="bg-white p-8 rounded-2xl shadow-lg w-full max-w-md">
-        
+
         <div className="text-center mb-6">
           <h1 className="text-3xl font-bold">
             Welcome Back 👋
