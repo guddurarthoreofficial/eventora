@@ -1,6 +1,8 @@
 import React, { useContext, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../context/AuthContext";
+import { toast } from "react-toastify";
+
 
 const Login = () => {
   const { login } = useContext(AuthContext);
@@ -31,15 +33,15 @@ const Login = () => {
         formData.password
       );
 
-      alert(data.message || "Login Successful");
+      // alert();
+      toast.success(data.message || "Login Successful");
+
       console.log(localStorage.getItem("token"));
       
       navigate("/");
     } catch (error) {
-      alert(
-        error?.response?.data?.message ||
-        "Login Failed"
-      );
+      toast.error(error?.response?.data?.message ||
+        "Login Failed");
     } finally {
       setLoading(false);
     }

@@ -1,4 +1,7 @@
 import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 import Home from "./pages/Home";
 import Navbar from "./components/Navbar";
 import EventDetail from "./pages/EventDetail";
@@ -44,6 +47,17 @@ function App() {
         <Route path="/my-bookings" element={<MyBookings />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
+
+      <ToastContainer
+        position="top-right"
+        autoClose={3000}
+        hideProgressBar={false}
+        newestOnTop
+        closeOnClick
+        pauseOnHover
+        theme="colored"
+      />
+      
     </BrowserRouter>
   );
 }
